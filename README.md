@@ -1,4 +1,4 @@
-# Alexa Skill Echo
+# Alexa Skill: Echo
 Simple Alexa Skill that responds to any recognized intent.
 
 ### Pre-requisites
@@ -15,8 +15,8 @@ The project uses by default the `lambdasharp` profile. Follow these steps to set
 2. Configure the profile with the AWS credentials you want to use
 3. **NOTE**: AWS Lambda function for Alexa Skills must be hosted in `us-east-1`
 
-### Create IAM role for the AlexaEcxho Lambda function
-The AlexaEcxho Lambda function requires an IAM role to access CloudWatchLogs. You can create the `LambdaSharp-AlexaEcho` role via the [AWS Console](https://console.aws.amazon.com/iam/home) or use the executing [AWS CLI](https://aws.amazon.com/cli/) commands.
+### Create `LambdaSharp-AlexaEcho` role for the lambda function
+The AlexaEcho lambda function requires an IAM role to create and write CloudWatch logs. You can create the `LambdaSharp-AlexaEcho` role via the [AWS Console](https://console.aws.amazon.com/iam/home) or use the executing [AWS CLI](https://aws.amazon.com/cli/) commands.
 
 ```shell
 aws iam create-role --profile lambdasharp --role-name LambdaSharp-AlexaEcho --assume-role-policy-document file://assets/lambda-role-policy.json
@@ -24,9 +24,17 @@ aws iam attach-role-policy --profile lambdasharp --role-name LambdaSharp-AlexaEc
 ```
 
 ### Deploy
+The following steps build, deploy, and configure the lambda function for an Alexa Skill.
+
 1. Restore project dependencies: `dotnet restore`
 2. Build project: `dotnet build`
 4. Deploy AlexaEcho lambda function: `dotnet lambda deploy-function`
+5. [Go to the published lambda function in the console](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/LambdaSharp-AlexaEcho?tab=code)
+6. Under `Triggers`
+    1. Click `Add Trigger`
+    2. Select `Alexa Skills Kit`
+    3. Click `Submit`
+7. The `AlexaEcho` lambda function is now ready.
 
 ### Copyright & License
 * Copyright (c) 2017 Steve Bjorg
