@@ -28,3 +28,7 @@ aws iam attach-role-policy --profile lambdasharp --role-name LambdaSharp-AlexaEc
 2. Build project: `dotnet build`
 4. Deploy AlexaEcho lambda function: `dotnet lambda deploy-function`
 
+### Copyright & License
+* Copyright (c) 2017 Steve Bjorg
+* MIT License
+
