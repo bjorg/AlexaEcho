@@ -34,7 +34,7 @@ The following steps build, deploy, and configure the lambda function for an Alex
     1. Click `Add Trigger`
     2. Select `Alexa Skills Kit`
     3. Click `Submit`
-7. The `AlexaEcho` lambda function is now ready.
+7. The `AlexaEcho` lambda function is now ready for use.
 
 ### Copyright & License
 * Copyright (c) 2017 Steve Bjorg
