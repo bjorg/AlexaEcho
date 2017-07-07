@@ -1,5 +1,5 @@
 # Alexa Skill: Echo
-Simple Alexa Skill that responds to any recognized intent.
+Simple [Amazon Alexa Skill](https://developer.amazon.com/alexa-skills-kit) that responds to any recognized intent.
 
 ### Pre-requisites
 The following tools and accounts are required to complete these instructions.
@@ -13,7 +13,7 @@ The project uses by default the `lambdasharp` profile. Follow these steps to set
 
 1. Create a `lambdasharp` profile: `aws configure --profile lambdasharp`
 2. Configure the profile with the AWS credentials you want to use
-3. **NOTE**: AWS Lambda function for Alexa Skills must be hosted in `us-east-1`
+3. **NOTE**: AWS Lambda function for Alexa Skills must be deployed in `us-east-1`
 
 ### Create `LambdaSharp-AlexaEcho` role for the lambda function
 The AlexaEcho lambda function requires an IAM role to create and write CloudWatch logs. You can create the `LambdaSharp-AlexaEcho` role via the [AWS Console](https://console.aws.amazon.com/iam/home) or use the executing [AWS CLI](https://aws.amazon.com/cli/) commands.
