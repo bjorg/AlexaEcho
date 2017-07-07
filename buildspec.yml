@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - dotnet restore
+      - dotnet build -c Release
+artifacts:
+  files:
+    - bin/Release/netcoreapp1.0/*
